@@ -1,12 +1,12 @@
-package Modelo;
+package modelo;
 
 import java.sql.*;
  
 public class ClaseConexion {
     
     private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    private static final String USUARIO = "ANGEL_SOSA";
-    private static final String CONTRASENA = "123456";
+    private static final String USUARIO = "CESAR_DEVELOPER";
+    private static final String CONTRASENA = "cesar2121";
 
     
     public static Connection getConexion() {
