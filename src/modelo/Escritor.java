@@ -83,7 +83,7 @@ public class Escritor {
     public void setCorreo_Escritor(String Correo_Escritor) {
         this.Correo_Escritor = Correo_Escritor;
     }
-     private int id_escritor;
+    private int id_escritor;
     private String Nombre_Escritor;
     private int Edad_Escritor;
     private double Peso_Escritor;
@@ -128,8 +128,9 @@ public class Escritor {
            modeloDeDatos.addRow(new Object[]{rs.getInt("id_escritor"),
                rs.getString("Nombre_Escritor"),
                rs.getInt("Edad_Escritor"),
-               rs.getInt("Peso_Escritor"),
+               rs.getDouble("Peso_Escritor"),
                rs.getString("Correo_Escritor")});
+           
            tabla.setModel(modeloDeDatos);
           
           }
@@ -139,9 +140,6 @@ public class Escritor {
           catch (Exception e) {
             System.out.println("Este es el error en el modelo, metodo mostrar " + e);
         }
-        
-          
-        
         
         }
      
@@ -160,13 +158,13 @@ public class Escritor {
        
        public void cargarDatosTABLA(IngresarEscritor vista){
     
-       int filaSeleccionada = vista.jtbEscitor.getSelectedRow();
+       int filaSeleccionada = vista.jtEscritor.getSelectedRow();
        if (filaSeleccionada != -1){
-           String id_escritorTb = vista.jtbEscitor.getValueAt(filaSeleccionada, 0).toString();
-           String Nombre_EscritorTb = vista.jtbEscitor.getValueAt(filaSeleccionada, 1).toString();
-           String Edad_EscritorTb = vista.jtbEscitor.getValueAt(filaSeleccionada,2).toString();
-           String Peso_EscritorTb = vista.jtbEscitor.getValueAt(filaSeleccionada,3).toString();
-           String Correo_EscritorTb = vista.jtbEscitor.getValueAt(filaSeleccionada, 4).toString();
+           String id_escritorTb = vista.jtEscritor.getValueAt(filaSeleccionada, 0).toString();
+           String Nombre_EscritorTb = vista.jtEscritor.getValueAt(filaSeleccionada, 1).toString();
+           String Edad_EscritorTb = vista.jtEscritor.getValueAt(filaSeleccionada,2).toString();
+           String Peso_EscritorTb = vista.jtEscritor.getValueAt(filaSeleccionada,3).toString();
+           String Correo_EscritorTb = vista.jtEscritor.getValueAt(filaSeleccionada, 4).toString();
            
            vista.txtNombre.setText(Nombre_EscritorTb);
            vista.txtEdad.setText(Edad_EscritorTb);

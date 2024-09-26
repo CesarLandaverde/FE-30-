@@ -1,7 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+ 
 package controlador;
 
 import java.awt.event.MouseEvent;
@@ -24,17 +22,19 @@ public class ctrlIngresarEscritor implements MouseListener{
     this.modelo= modelo;
     this.vista = vista;
     
+    /*
     vista.btnIngresar.addMouseListener(this);
-    modelo.Mostrar(vista.jtbEscitor);
     vista.btnEliminar.addMouseListener(this);
-    vista.jtbEscitor.addMouseListener(this);
+    vista.jtEscritor.addMouseListener(this);
     vista.btnActualizar.addMouseListener(this);
+    */ 
     
+    modelo.Mostrar(vista.jtEscritor);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
+      /*  
         if(e.getSource()== vista.btnIngresar){
         
         modelo.setNombre_Escritor(vista.txtNombre.getText());
@@ -42,17 +42,17 @@ public class ctrlIngresarEscritor implements MouseListener{
       modelo.setPeso_Escritor(Double.parseDouble(vista.txtPeso.getText()));
       modelo.setCorreo_Escritor(vista.txtCorreo.getText());
         modelo.Guardar();
-        modelo.Mostrar(vista.jtbEscitor);
+        modelo.Mostrar(vista.jtEscritor);
 
         
         
         }
         
         if(e.getSource() == vista.btnEliminar){
-        modelo.Eliminar(vista.jtbEscitor);
-        modelo.Mostrar(vista.jtbEscitor);
+        modelo.Eliminar(vista.jtEscritor);
+        modelo.Mostrar(vista.jtEscritor);
         }
-        if(e.getSource() == vista.jtbEscitor){
+        if(e.getSource() == vista.jtEscritor){
         modelo.cargarDatosTABLA(vista);
         
         }
@@ -63,10 +63,10 @@ public class ctrlIngresarEscritor implements MouseListener{
         modelo.setPeso_Escritor(Double.parseDouble(vista.txtPeso.getText()));
         modelo.setCorreo_Escritor(vista.txtCorreo.getText());
         
-        modelo.Actualizar(vista.jtbEscitor);
-        modelo.Mostrar(vista.jtbEscitor);
+        modelo.Actualizar(vista.jtEscritor);
+        modelo.Mostrar(vista.jtEscritor);
         }
-        
+        */
         
     }
 

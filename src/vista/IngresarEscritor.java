@@ -4,6 +4,9 @@
  */
 package vista;
 
+import controlador.ctrlIngresarEscritor;
+import modelo.Escritor;
+
 /**
  *
  * @author USUARIO
@@ -15,6 +18,14 @@ public class IngresarEscritor extends javax.swing.JFrame {
      */
     public IngresarEscritor() {
         initComponents();
+    }
+    
+    public static void initIngresarEscritor(){
+    Escritor modelo = new Escritor();
+    IngresarEscritor vista = new IngresarEscritor();
+    ctrlIngresarEscritor controlador = new ctrlIngresarEscritor(modelo,vista);
+    vista.setVisible(true);
+    
     }
 
     /**
@@ -40,8 +51,8 @@ public class IngresarEscritor extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         btnIngresar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jtbEscitor = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtEscritor = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -176,7 +187,7 @@ public class IngresarEscritor extends javax.swing.JFrame {
                 .addGap(59, 59, 59))
         );
 
-        jtbEscitor.setModel(new javax.swing.table.DefaultTableModel(
+        jtEscritor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -187,15 +198,15 @@ public class IngresarEscritor extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jtbEscitor);
+        jScrollPane2.setViewportView(jtEscritor);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17))
@@ -203,10 +214,10 @@ public class IngresarEscritor extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
@@ -288,7 +299,7 @@ public class IngresarEscritor extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new IngresarEscritor().setVisible(true);
+                initIngresarEscritor();
             }
         });
     }
@@ -304,8 +315,8 @@ public class IngresarEscritor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jtbEscitor;
+    private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable jtEscritor;
     public javax.swing.JTextField txtCorreo;
     public javax.swing.JTextField txtEdad;
     public javax.swing.JTextField txtNombre;
